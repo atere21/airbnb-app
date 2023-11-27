@@ -22,7 +22,8 @@ export default function Home({ exploreData }) {
           <h2 className='text-4xl font-semibold pb-5'>Explore Nearby</h2>
           <div className='grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3  xl:grid-cols-4'>
             {location.map((locationItem, index) => (
-              <div className='flex items-center space-x-4 m-2 mt-5 rounded-xl cursor-pointer hover:bg-gray-100 hover:scale-105 transition transform duration-200 ease-out' key={index}>
+              <div className='flex items-center space-x-4 m-2 mt-5 rounded-xl cursor-pointer hover:bg-gray-100 
+              hover:scale-105 transition transform duration-200 ease-out' key={index}>
                 <div className='relative h-16 w-16'>
                   <Image layout='fill' className='rounded-lg' src={locationItem.imgUrl} alt={locationItem.location} />
                 </div>
@@ -38,7 +39,7 @@ export default function Home({ exploreData }) {
         <section>
           <h2 className='text-4xl font-semibold py-8'>Live Anywhere</h2>
           <div className='flex space-x-4 overflow-scroll 
-          scrollbar-hide p-3  '>
+          scrollbar-hide p-3'>
             {house.map((houseItem, index) => (
               <div className='cursor-pointer hover:scale-105 transform transition duration-300 ease-out'
               key={index}>
@@ -59,6 +60,7 @@ export default function Home({ exploreData }) {
         description="whishlists curated by Airbnb."
         buttonText="Get Inspired"
         />
+        
       </main>
 
       <Footer/>
@@ -88,8 +90,8 @@ export async function getStaticProps() {
     console.error('Error fetching data:', error.message);
     return {
       props: {
-        exploreData: [], // Return an empty array or default data in case of error
-      },
+        exploreData: [], 
+       },
     };
   }
 }
