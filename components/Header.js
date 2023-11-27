@@ -85,7 +85,7 @@ const Header = () => {
             <h2 className='text-2xl flex-grow font-semibold'>Number of Guests</h2>
 
             <BsPeople className='h-5'/>
-            <inputb  
+            <input
              value={noOfGuests}
              onChange={(e) => setNoOfGuests(e.target.value) }
              min={1}
@@ -93,9 +93,10 @@ const Header = () => {
              className='w-12 pl-2 text-lg outline-none text-red-400'
              />
           </div>
+
           <div className='flex'>
             <button onClick={resetInput} className='flex-grow text-gray-500'>Cancel</button>
-            <button onClick={search} className='flex-grow text-red-400'>Search</button>
+            <button onClick={searchInput} className='flex-grow text-red-400'>Search</button>
           </div>
         </div>
       }
